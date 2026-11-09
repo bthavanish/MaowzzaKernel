@@ -1,0 +1,28 @@
+name: Build Kernel
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-kernel:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Build
+        uses: dabao1955/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/Dai-doz/MaowzzaKernel
+          kernel-branch: Enforcing-5.10-bpf-ksu
+          depth: 1
+          config: exynos850-a12snsxx_defconfig
+          arch: arm64
+          aosp-clang: true
+          aosp-gcc: true
+          android-version: 12
+          aosp-clang-version: r416183b
+          ksu: false
+          anykernel3: true
+          release: true
+          access-token: ${{ secrets.GITHUB_TOKEN }}
