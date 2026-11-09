@@ -14,7 +14,7 @@ jobs:
         uses: dabao1955/kernel_build_action@main
         with:
           kernel-url: https://github.com/Dai-doz/MaowzzaKernel
-          kernel-branch: Enforcing-5.10-bpf-ksu
+          kernel-branch: Permissive-5.10-bpf
           depth: 1
           config: exynos850-a12snsxx_defconfig
           arch: arm64
@@ -22,7 +22,8 @@ jobs:
           aosp-gcc: true
           android-version: 12
           aosp-clang-version: r416183b
-          ksu: false
+          ksu: true
+          ksu-version: main
           anykernel3: true
           release: true
           access-token: ${{ secrets.GITHUB_TOKEN }}
