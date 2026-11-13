@@ -13,14 +13,14 @@ jobs:
       - name: Build
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/Dai-doz/MaowzzaKernel
-          kernel-branch: Permissive-5.10-bpf
+          kernel-url: https://github.com/galaxym12development/android_kernel_samsung_exynos850
+          kernel-branch: android-14.0
           depth: 1
-          config: exynos850-a12snsxx_defconfig
+          config: a12s_defconfig
           arch: arm64
           aosp-clang: true
           aosp-gcc: true
-          android-version: 12
+          android-version: 14
           aosp-clang-version: r416183b
           ksu: true
           ksu-version: main
