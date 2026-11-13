@@ -20,10 +20,13 @@ jobs:
           arch: arm64
           aosp-clang: true
           aosp-gcc: true
-          android-version: 14
+          android-version: 12
           aosp-clang-version: r416183b
           ksu: true
+          ksu-other: true
+          ksu-url: https://github.com/rsuntk/KernelSU
           ksu-version: main
-          anykernel3: true
+          disable-lto: true
+          anykernel3: false
           release: true
           access-token: ${{ secrets.GITHUB_TOKEN }}
